@@ -1,22 +1,7 @@
 
 
 $(document).ready(function() {
-	
-	
-	$("#fetch").click(function(){
-		var searchInput = $("#searchTextField").val();
-		
-		if(searchInput=="")
-			{
-				alert("Please enter location");
-			}
-		else
-			{
-			loadWeatherWebService(searchInput);
-			}
-		
-	});
-	
+
 	$("#intro").click(function(){
 		var htmlString = "<div class='hellomsg'>Hey Thanks! <br /><br />Just click the button to get your location & weather...</b>? <br />";
 		htmlString = htmlString+ "<b>Go on now, Try me.</b></div>";
@@ -35,7 +20,7 @@ function getCurrentCity(latitude, longitude)
 		var currentLoc = result.results[5].formatted_address;		
 		loadWeatherWebService(currentLoc);
 	}).fail(function(){
-		
+		alert("Sorry, Error occured in retrieving City, Please try again");
 	});
 	
 }
