@@ -23,7 +23,7 @@ var getCurrentPosition = function() {
         var text = "<div>Latitude: " + pos.coords.latitude + 
                     "<br/>" + "Longitude: " + pos.coords.longitude + "<br/>" + 
                     "Accuracy: " + pos.coords.accuracy + "m<br/>" + "</div>";
-       // $("#cur_position").html(text);
+        $("#cur_position").html(text);
         console.log(text);
         
         var mapwidth = parseInt($('#map').css("width"), 10);  // remove 'px' from width value
@@ -33,8 +33,6 @@ var getCurrentPosition = function() {
             pos.coords.latitude + "," + pos.coords.longitude + 
             "&zoom=13&size=" + mapwidth + "x" + mapheight + "&maptype=roadmap&markers=color:green%7C" +
             pos.coords.latitude + "," + pos.coords.longitude + "&sensor=false");
-        getCurrentCity(pos.coords.latitude,pos.coords.longitude);
-        $('#map').fadeIn('slow');
     };
     var fail = function(error) {
         $("#cur_position").html("Error getting geolocation: " + error.code);
@@ -42,7 +40,7 @@ var getCurrentPosition = function() {
     };
 
     $('#map').css('visibility','hidden');
-   // $("#cur_position").html("Getting geolocation . . .");
+    $("#cur_position").html("Getting geolocation . . .");
     console.log("Getting geolocation . . .");
     navigator.geolocation.getCurrentPosition(success, fail);
 };
