@@ -19,6 +19,7 @@
 
 // api-geolocation
 var getCurrentPosition = function() {
+	$("#container").html("Fetching your weather details, please standby...");
     var success = function(pos) {                
         var text = "<div>Latitude: " + pos.coords.latitude + 
                     "<br/>" + "Longitude: " + pos.coords.longitude + "<br/>" + 

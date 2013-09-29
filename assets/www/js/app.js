@@ -4,11 +4,15 @@ $('#page-home').live('pageshow', function(event){
 //$(document).ready(function() {
 
 	$("#intro").click(function(){
-		var htmlString = "<div class='hellomsg'>Hey Thanks! <br /><br />Just click the button to get your location & weather...<br />";
-		htmlString += "<br />For this app to work, please ensure that your GPS is on and working. This app may also require an active data connection. <br/>";
-		htmlString = htmlString+ "<b>Go on now, Try me.</b></div>";
+		var htmlString = "<div class='hellomsg'>Hey Thanks! <br /><br />Just click 'fetch' to get your location & latest weather details.....<br />";
+		//htmlString += "<br />For this app to work, please ensure that your GPS is on and working. This app may also require an active data connection. <br/>";
+		htmlString = htmlString+ "<br /><b>Go on now, Try me.</b></div>";
 		$("#container").html(htmlString);
 		$("#map").hide();
+	});
+	
+	$("#WeatherButton").click(function(){
+		getCurrentPosition();
 	});
 	
 	$("#recent").click(function(){
@@ -57,8 +61,7 @@ function getCurrentCity(latitude, longitude)
 
 function loadWeatherWebService(location)
 {
-	var htmlString="";
-	$("#container").html("Updating weather details, please standby...");
+	var htmlString="";	
 	var apiUrl = "http://api.openweathermap.org/data/2.5/weather?q="+location+"&units=metric";	
 	console.log(apiUrl);
 	$.ajax({url:apiUrl,dataType:'jsonp',}).done(function(result){

@@ -26,25 +26,25 @@
 		data-theme="b">
 
 		<div data-role="header" data-theme="d">
-			<h1 class="hellomsg">Weather App</h1>
-			<a href="#" data-icon="home" data-iconpos="" id="intro"
-				class="ui-btn-left" data-role="button" data-theme="b">Home</a>
+			<h1 class="hellomsg" style="font-size:1.2em;">Weather App</h1>
+			<a href="#" data-icon="home" data-iconpos="notext" id="intro"
+				class="ui-btn-left" data-role="button" data-theme="d"></a>
 		</div>
 
 		<div data-role="content" data-theme="b">
 
-			<div data-role="button" onclick="getCurrentPosition();">Show
-				Weather</div>
-
+			<!-- <div data-role="button" onclick="getCurrentPosition();">Show
+				Weather</div> -->
+			
+			<div id="WeatherButton">Fetch! </div>
 
 			<div id="statusMsg"></div>
 			<div id="container">
 				<div class="hellomsg">
-					Hey! <br /> <br />Just click the button to get your location &
-					latest weather at your location.. <br />
-					For this app to work, please ensure that your GPS is on and working. This app may also
-					require an active data connection. <br/>
-					 <b>Go on now, Try me.</b>
+					Hey! <br /> <br />Just click 'fetch' to get your location &
+					latest weather details.. <br />
+			
+				 <b>Go on now, Try me.</b>
 				</div>
 			</div>
 
