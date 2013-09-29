@@ -1,0 +1,38 @@
+.hellomsg
+{
+	font-size:1.7em;
+	color:#dd4b39;
+	font-family: 'Satisfy', cursive;
+}
+
+#container
+{
+	width:95%;
+	-moz-border-radius:15px;
+	-border-radius:15px;
+	-webkit-border-radius:15px;
+	background:white;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:2%;
+	padding:10px;
+}
+
+#statusMsg
+{
+	width:95%;
+	background:rgba(61, 148, 0, 0.6);
+	color:white;
+	margin-left:auto;
+	padding:10px;
+	font-family: 'Satisfy', cursive;
+	display:none;
+	font-size:1.2em;
+}
+
+.weatherData
+{
+	background:#f9edbe;
+	padding:5px;
+	margin-top:5px;
+}

@@ -1,0 +1,71 @@
+<!-- Copyright (c) 2012 Mobile Developer Solutions -->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-type" name="viewport"
+	content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<title>My Weather Application GPS Example</title>
+
+<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
+<link href='http://fonts.googleapis.com/css?family=Satisfy'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="index.css" />
+<link rel="stylesheet" href="style/style.css" />
+<script src="jquery.mobile/jquery-1.7.2.min"></script>
+<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="index.js"></script>
+<script src="js/app.js"></script>
+<script src="js/map.js"></script>
+
+</head>
+
+<body onload="init();">
+	<div data-role="page" id="page-home" class="type-interior"
+		data-theme="b">
+
+		<div data-role="header" data-theme="d">
+			<h1 class="hellomsg">Weather App</h1>
+			<a href="#" data-icon="grid" data-iconpos="notext" id="intro"
+				class="ui-btn-right" data-role="button">Go Home</a>
+		</div>
+
+		<div data-role="content" data-theme="b">
+
+			<div data-role="button" onclick="getCurrentPosition();">Show
+				Weather</div>
+
+
+			<div id="statusMsg"></div>
+			<div id="container">
+				<div class="hellomsg">
+						Hey! <br /> <br />Just click the button to get your
+						location & latest weather at your location...</b>? <br /> <b>Go
+							on now, Try me.</b>
+				</div>
+			</div>
+
+			<div id="cur_position"></div>
+			<img id="map" />
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" class="footer-docs"
+		data-theme="b">
+		<p>&copy; Students</p>
+	</div>
+	</div>
+
+	<script type="text/javascript" charset="utf-8"
+		src="apis/geolocation.js"></script>
+
+</body>
+</html>
