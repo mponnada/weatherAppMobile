@@ -1,15 +1,43 @@
+$('#page-home').live('pageshow', function(event){
+	
 
-
-$(document).ready(function() {
+//$(document).ready(function() {
 
 	$("#intro").click(function(){
-		var htmlString = "<div class='hellomsg'>Hey Thanks! <br /><br />Just click the button to get your location & weather...</b>? <br />";
+		var htmlString = "<div class='hellomsg'>Hey Thanks! <br /><br />Just click the button to get your location & weather...<br />";
+		htmlString += "<br />For this app to work, please ensure that your GPS is on and working. This app may also require an active data connection. <br/>";
 		htmlString = htmlString+ "<b>Go on now, Try me.</b></div>";
 		$("#container").html(htmlString);
 		$("#map").hide();
 	});
+	
+	$("#recent").click(function(){
+		alert("For this app to work, please ensure that your GPS is on and working. This app requires an active data connection or Wifi.");
+	});
+	
+	$("#about").click(function(){
+		var devStr = "Hello, \n\n This application is developed by: \n ";
+		devStr += "- Abhilash Gidla - S.R.K.R Engineering college\n";
+		devStr += "- Jyothi Swaroop Meka - S.R.K.R Engineering college \n";
+		devStr += "- Kalyan Thirupathi - Freelance Developer\n";
+		devStr += "- Mohan Ponnada - Mentor\n";
+		alert(devStr);
+	});
+	
+	$("#info").click(function(){
+		var devStr = "This application is free to download and use, \n\n This application is developed under the CC 3.0 License: \n ";
+		devStr += "The application makes use of:\n";
+		devStr += "- Google Maps API \n";
+		devStr += "- openweathermap.org's free Weather API \n";
+		devStr += "- Free ICON from iconfinder.com \n";
+		devStr += "- All copyrights are property of their respective owners. \n";
+		alert(devStr);
+	});
+
+	
 
 });
+
 
 function getCurrentCity(latitude, longitude)
 {

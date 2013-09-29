@@ -16,18 +16,19 @@
 <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
 <script type="text/javascript" charset="utf-8" src="index.js"></script>
 <script src="js/app.js"></script>
-<script src="js/map.js"></script>
 
 </head>
 
 <body onload="init();">
+
+	<!-- Page Home starts here 1 (actual App code)-->
 	<div data-role="page" id="page-home" class="type-interior"
 		data-theme="b">
 
 		<div data-role="header" data-theme="d">
 			<h1 class="hellomsg">Weather App</h1>
-			<a href="#" data-icon="grid" data-iconpos="notext" id="intro"
-				class="ui-btn-right" data-role="button">Go Home</a>
+			<a href="#" data-icon="home" data-iconpos="" id="intro"
+				class="ui-btn-left" data-role="button" data-theme="b">Home</a>
 		</div>
 
 		<div data-role="content" data-theme="b">
@@ -39,9 +40,11 @@
 			<div id="statusMsg"></div>
 			<div id="container">
 				<div class="hellomsg">
-						Hey! <br /> <br />Just click the button to get your
-						location & latest weather at your location...</b>? <br /> <b>Go
-							on now, Try me.</b>
+					Hey! <br /> <br />Just click the button to get your location &
+					latest weather at your location.. <br />
+					For this app to work, please ensure that your GPS is on and working. This app may also
+					require an active data connection. <br/>
+					 <b>Go on now, Try me.</b>
 				</div>
 			</div>
 
@@ -57,11 +60,15 @@
 
 
 		</div>
-	</div>
-	<div data-role="footer" data-position="fixed" class="footer-docs"
-		data-theme="b">
-		<p>&copy; Students</p>
-	</div>
+		<div data-role="footer" class="nav-glyphish-example" data-position="fixed">
+			<div data-role="navbar" class="nav-glyphish" data-grid="b">
+				<ul>
+					<li><a href="#" id="about" data-icon="star">About Us</a></li>
+					<li><a href="#" id="recent" data-icon="alert">Note</a></li>
+					<li><a href="#" id="info" data-icon="info">Credits</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
 	<script type="text/javascript" charset="utf-8"
